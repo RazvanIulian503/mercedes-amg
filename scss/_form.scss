@@ -1,0 +1,58 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-sizing: border-box;
+}
+
+.form-section {
+    height: 100vh;
+    background: 
+    linear-gradient(
+        to right,
+        rgba($dark, .9),
+        rgba($dark, .4)
+    ), url('../images/hero.jpg') center top;
+    background-size: cover;
+    background-position: center;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    background-color: rgba($dark, .7);
+    border-radius: 25px;
+    align-content: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form {
+    width: auto !important;
+}
+
+.form-text {
+    text-align: center;
+
+    h2 {
+      color: $lite;
+      margin-top: 20px;
+    }
+
+    button {
+        width: auto !important;
+        padding: 0 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        a {
+            text-decoration: none;
+            color: $dark;
+        }
+    }
+}

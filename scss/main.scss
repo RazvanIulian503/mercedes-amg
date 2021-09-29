@@ -1,0 +1,803 @@
+@import 'variables';
+@import 'form';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Phone Menu */
+
+.menu {
+    background-color: rgba($dark, .9);
+    width: 100%;
+    transform: translateY(65%);
+    z-index: 10000;
+    box-shadow: var(--shadow-black-300);
+    position: fixed;
+    display: none;
+    height: 50%;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    text-align: center;
+
+    &-phone-links {
+        padding-top: 10%;
+
+        li {
+            list-style: none;
+            margin-bottom: 20px;
+            
+            a {
+                text-decoration: none;
+                color: $lite;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+
+/* Navbar */ 
+
+.navbar {
+    padding: 20px 0;
+
+    &-links {
+        padding: 40px 25px;
+
+        ul li {
+            display: inline-block;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                font-size: 25px;
+                color: $lite;
+                margin-right: 40px;
+                transition: .5s;
+
+                &:hover {
+                    opacity: .6;
+                }
+            }
+
+        }
+    }
+}
+
+.menu-btn {
+    position: absolute;
+    z-index: 1;
+    right: 2rem;
+    top: 3rem;
+    height: 20px;
+    width: 28px;
+    cursor: pointer;
+    display: none;
+    
+    &-burger {
+        position: absolute;
+        right: 0;
+        top: .5rem;
+        width: 28px;
+        height: 3px;
+        background-color: $lite;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            width: 28px;
+            height: 3px;
+            background-color: $lite;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            width: 20px;
+            height: 3px;
+            background-color: $lite;
+        }
+
+        &.open {
+            transform: rotate(360deg);
+            background: transparent;
+
+            &::before {
+                transform: rotate(45deg) translate(5px, 8px);
+            }
+
+            &::after {
+                width: 28px;
+                transform: rotate(-45deg) translate(3px, -7px);
+            }
+        }
+    }
+}
+
+
+
+
+
+/* Home Section */
+
+.home {
+    height: 100vh;
+    background: 
+    linear-gradient(
+        to right,
+        rgba($dark, .9),
+        rgba($dark, .4)
+    ), url('../images/hero.jpg') center top;
+    background-size: cover;
+    background-position: center;
+
+
+    &-text {
+        padding-left: 10%;
+        padding-top: 5%;
+        color: $lite;
+    }
+
+    &-header {
+        font-size: 80px;
+        font-weight: 500;
+    }
+
+    &-para {
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+}
+
+
+
+/* About-AMG Section */
+
+.about-amg {
+    height: 100vh;
+    background-color: $dark;
+
+    .about-us {
+        padding-top: 6%;
+
+        &-image img {
+            max-width: 550px;
+        }
+    }
+
+    .home-text {
+        margin-left: 15%;
+
+        button {
+            margin-top: 20px;
+        }
+    }
+}
+
+.header {
+    font-weight: 500;
+    font-size: 50px;
+
+    span {
+        color: $contrast;
+    }
+}
+
+.para {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* Vehicles Section */
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+
+    &-slide {
+        color: $lite;
+    }
+}
+
+:root {
+    --swiper-navigation-color: #fff;
+}
+
+.first-slide {
+    background: url('../images/amg-1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.second-slide {
+    background: url('../images/amg-2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.third-slide {
+    background: url('../images/amg-3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.swipper-button-prev {
+    color: #fff;
+}
+
+.vehicle-info {
+    font-size: 2em;
+
+    &-after {
+        background-color: $lite;
+        width: 70%;
+        height: 2px;
+        margin-bottom: 50px;
+    }
+
+    small {
+        font-size: 16px;
+        font-weight: 300;
+        margin-left: 10px;
+    }
+}
+
+.slide-info {
+    margin-left: 150px;
+}
+
+.swiper-slide .row {
+    margin-top: 80px;
+}
+
+
+
+/* Join Community Section */
+
+.community {
+    background-color: $dark;
+    color: $lite;
+    height: 100vh;
+
+    &-image img {
+        height: 100vh;
+        width: 45%;
+        position: absolute;
+        right: 0;
+    }
+
+    &-text {
+        background-color: rgba($lite, .1);
+        border-radius: 5px;
+        margin-top: 25%;
+        height: 452px;
+        width: 550px;
+
+        h1 {
+            margin-left: 18%;
+            padding-top: 7%;
+        }
+
+        p {
+            margin-left: 18%;
+        }
+
+        .full-button {
+            margin-left: 18%;
+        }
+    }
+}
+
+
+/* Newsletter */
+
+
+.newsletter {
+    background-color: rgba($dark, .9);
+    height: 22vh;
+    text-align: center;
+
+    &-heading h1 {
+        color: white;
+        font-size: 2em;
+        padding-top: 3%;
+    }
+
+    &-input {
+        margin-top: 20px;
+
+        input {
+            width: 200px;
+            height: 35px;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+        }
+
+        button {
+            height: 35px;
+            width: 100px;
+            border: none;
+            background-color: $contrast;
+            color: $lite;
+            border-radius: 5px;
+            transition: .3s;
+            margin-left: 10px;
+
+            &:hover {
+                background-color: rgba($contrast, .7);
+            }
+        }
+    }
+}
+
+
+
+/* Contact Section */
+
+.contact {
+    height: 100vh;
+    background: url('../images/amg-5.jpg');
+    background-size: cover;
+    background-position: center;
+
+    .container {
+        padding-top: 6%;
+    }
+
+    &-text {
+        color: $lite;
+
+        h1 {
+            font-size: 70px;
+            text-align: center;
+            font-weight: 400;
+            padding-top: 40px;
+        }
+    }
+
+    &-form {
+        background-color: rgba($dark, .8);
+        border-radius: 5px;
+        height: 600px;
+
+        input, textarea {
+            width: 85%;
+            border: none;
+            margin-top: 50px;
+            background: transparent;
+            border-bottom: 2px solid $lite;
+            color: $lite;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: $lite;
+        }
+
+        button {
+            margin-top: 50px;
+        }
+
+        form {
+            padding-left: 30px;
+        }
+    }
+}
+
+
+/* Footer */ 
+
+.footer {
+    height: 30vh;
+    background-color: $dark;
+
+
+    &-logo {
+      padding-top: 20%;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    &-links {
+        li {
+            display: inline-block;
+            padding-top: 10%;
+            transform: translateX(-20%);
+    
+            a {
+                color: $lite;
+                text-decoration: none;
+                font-size: 25px;
+                margin-left: 45px;
+                transition: .3s;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    p {
+        color: $lite;
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .social-links {
+        
+        li {
+            display: inline-block;
+            
+
+            i {
+                font-size: 30px;
+                margin-left: 20px;
+                color: $lite;
+                margin-top: 190%;
+                transition: .3s;
+
+                &:hover {
+                    transform: translateY(-10px);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    .footer-links li a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .about-amg {
+        .home-text {
+            margin-left: 0;
+        }
+    }
+
+    .join-img {
+        display: none;
+    }
+    
+    
+    .footer {
+      .social-links {
+        li {
+            i {
+                font-size: 25px;
+            }
+        }
+      }    
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .navbar {
+        &-links {
+            display: none;
+        }
+
+        .amg-logo img {
+            width: 200px;
+            padding-top: 15%;
+        }
+
+        .menu-btn {
+            display: block;
+        }
+    }
+    .home-text {
+        padding-top: 10%;
+    }
+
+    .about-amg {
+        height: 120vh;
+
+        .home-text {
+            margin-left: 0;
+            padding-top: 0;
+
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        .about-us-image img {
+            width: 400px;
+            margin-top: 80px;
+            margin-left: 50px;
+        }
+    }
+
+
+    .vehicle-information {
+        display: none;
+    }
+
+    .newsletter-heading {
+        h1 {
+            font-size: 25px;
+        }
+    }
+
+
+
+    .footer-logo {
+        display: none;
+    }
+    .footer {
+        &-logo {
+            padding-top: 0;
+        }
+        &-links li {
+            padding-top: 5%;
+        }
+        .social-links {
+            li {
+                i {
+                    margin-top: 70%;
+                }
+            }
+          }    
+    }
+}
+
+@media screen and (max-width:570px){
+    .home-text {
+        padding-top: 15%;
+
+        h1 {
+            font-size: 60px;
+        }
+
+        p {
+
+            br {
+                display: none;
+            }
+
+            font-size: 25px;
+        }
+
+        button {
+            width: 120px;
+        }
+    }
+
+    .slide-info {
+        margin-left: 12%;
+
+        h1 {
+            font-size: 40px;
+        }
+        
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .community {
+    
+        &-text {
+            width: 450px;
+            margin-left: 5%;
+    
+            h1 {
+                margin-left: 8%;
+                padding-top: 7%;
+            }
+    
+            p {
+                margin-left: 8%;
+            }
+    
+            .full-button {
+                margin-left: 8%;
+            }
+        }
+    }
+
+    .contact {
+
+        .container {
+            padding-top: 15%;
+        }
+        
+        &-form {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width:480px){
+    .about-amg {
+        
+        .about-us-image img {
+            width: 300px;
+            margin-top: 80px;
+            margin-left: 40px;
+        }
+    }
+
+    .community {
+        height: 85vh;
+    
+        &-text {
+            width: 90%;
+            height: 90%;
+            margin-left: 7%;
+    
+            h1 {
+                margin-left: 8%;
+                font-size: 40px;
+            }
+    
+            p {
+                margin-left: 8%;
+                font-size: 18px
+            }
+    
+            .full-button {
+                margin-left: 8%;
+            }
+        }
+    }
+
+    .footer {
+        height:40vh;
+    }
+}
+
+@media screen and (max-width:400px){
+        .about-amg {
+            .home-text {
+                p br {
+                    display: none;
+                }
+            }
+
+            .about-us-image img {
+                width: 300px;
+                margin-top: 80px;
+                margin-left: 20px;
+            }
+        }
+
+        .slide-info {
+            margin-left: 12%;
+    
+            h1 {
+                font-size: 30px;
+            }
+            
+            p {
+                font-size: 16px;
+            }
+
+            button {
+                width: 120px;
+            }
+        }
+
+}
+
+
+@media screen and (max-width:370px){
+   
+    .community {
+    
+        &-text {
+            margin-left: 7%;
+    
+            h1 {
+                margin-left: 8%;
+                font-size: 40px;
+            }
+    
+            p {
+                margin-left: 8%;
+                font-size: 18px
+            }
+
+            br {
+                display: none;
+            }
+    
+            .full-button {
+                margin-left: 8%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .about-amg {
+        .about-us-image img {
+            margin-top: 40px;
+        }
+    }
+
+    .contact {
+        .container {
+            padding-top: 15px;
+        }
+    }
+
+    .newsletter-heading h1 {
+        font-size: 20px;
+    }
+
+    .newsletter button {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:376px) {
+    .contact {
+        .container {
+            padding-top: 20px;
+        }
+    }
+
+    .community {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width:350px){
+    .contact {
+
+        &-form {
+            
+            h1 {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:321px) {
+    .about-amg {
+        height: 130vh;
+
+        .about-us-image img {
+            width: 220px;
+        }
+    }
+
+    .community {
+        height: 120vh;
+    }
+    
+    .newsletter {
+        height: 30vh;
+    }
+
+    .footer {
+        height: 50vh;
+    }
+}

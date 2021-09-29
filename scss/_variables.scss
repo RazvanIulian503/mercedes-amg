@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+$dark: #000;
+$lite: #fff;
+$contrast: #32ff6a;
+
+.full-button {
+    font-family: 'Roboto Condensed';
+    color: $dark;
+    background-color: $lite;
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+    width: 130px;
+    font-size: 20px;
+    font-weight: 400;
+    transition: .3s;
+
+    &:hover {
+        background-color:#EFEFEF;
+    }
+}
+
+.simple-button {
+    background: none;
+    border: 3px solid $lite;
+    border-radius: 5px;
+    color: $lite;
+    height: 45px;
+    width: 130px;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 20px;
+    transition: .3s;
+
+    &:hover {
+        background-color: $lite;
+        color: $dark;
+    }
+}
